@@ -2,17 +2,14 @@ import pymysql
 import csv
 import boto3
 
-# ====== CONFIGURACIÓN MYSQL ======
-db_host = "localhost"       # Cambia por tu host (ej. "mysql", "127.0.0.1" o la IP del contenedor MySQL)
-db_user = "root"            # Usuario de la base
-db_pass = "password"        # Contraseña
-db_name = "mi_base"         # Nombre de la base de datos
-db_table = "mi_tabla"       # Tabla que quieres exportar
+db_host = "mysql_universidad"       
+db_user = "root"       
+db_pass = "utec"     
+db_name = "universidad"       
+db_table = "alumnos"      
 
-# ====== CONFIGURACIÓN CSV ======
 fichero_csv = "data.csv"
 
-# ====== CONFIGURACIÓN S3 ======
 nombre_bucket = "diazzz-storage"
 ruta_s3 = "ingesta/" + fichero_csv
 
